@@ -44,13 +44,11 @@ But unfortunately, the opencv library does not contain any arabic or Persian fon
 `img = Image.new('RGB', (300, 300), (255, 255, 255))`
 
 
- > The arguments of new function are: 
- >
- >1. the mode of the image 
- >
- >2. the shape of image
- >
- > 3. and the colour of the image 
+**The arguments of new function are:** 
+ 
+ 1. the mode of the image
+ 2. the shape of image 
+ 3. and the colour of the image 
      
 the colour is given as a tuple of 3 number each of the represent the *red*, the *green* and the *blue* channels of the images and each of them takes a number between 0, 255
 the (255, 255, 255) represents the white colour
@@ -61,17 +59,19 @@ After creating the blank images, the next step is to prepare the Persian text.
 
 
   * We first needed to install **python-bidi** and __arabic_reshaper__ libraries, and then imported the **arabic_reshaper** library and the **get_display function** from **bidi.algorithm**. 
-  * we gave the Persian text as a string to reshape function of arabic_reshaper library then the reshaped text was passed to get_display function. 
+* we gave the Persian text as a string to reshape function of arabic_reshaper library then the reshaped text was passed to get_display function. 
 
 ### Putting the Persian text on the image:
 Since the pillow library has limited number of fonts and does not have any arabic or Persian fonts, we download an external Persian font and passed it to **truetype function** inside the **ImageFont** module of pillow, to make us able to use it to put text on image and determine the size of the font as well.
 
 
 To put the text we used **Draw function** of **ImageDraw** module and pass the blank image as an argument and assigned it to **an object** then we used the **text attribute** of that object to put the text or word on the image:
-    
-    ''' draw = ImageDraw.Draw(img)
-      draw.text((100, 150), bidi_word, font=font, fill='blue')
-       img.save('img.png')'''
+
+'''
+draw = ImageDraw.Draw(img)
+draw.text((100, 150), bidi_word, font=font, fill='blue')
+img.save('img.png')
+'''
        
 
 in the above mentioned text attribute we passed 4 parameters namely:
@@ -89,9 +89,9 @@ then we saved the image by using **save function** on the img object
 > one thing to notice is that in opencv library we had to pass the bottom-left coordinate of the text, but for the pillow library is the left-top coordinate
 
 ### I put each of thses three stages in a function: 
-    1. function of creating blank image
-    2. function of preparing Persian/Arabic text
-    3. function of putting text on image
+ 1. function of creating blank image
+ 2. function of preparing Persian/Arabic text
+ 3. function of putting text on image
 
 Then put thses function in 2 for loops to create the dataset of images with Persian text.
 
