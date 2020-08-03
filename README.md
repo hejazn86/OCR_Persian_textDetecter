@@ -86,7 +86,7 @@ in the above mentioned text attribute we passed 4 parameters namely:
 then we saved the image by using **save function** on the img object
 
 
-> one thing to notice is that in opencv library we had to pass the bottom-left coordinate of the text, but for the pillow library is the left-top coordinate
+> one thing to notice is that in opencv library we had to pass the **bottom-left coordinate** of the text, but for the pillow library is the **left-top coordinate**
 
 ### I put each of thses three stages in a function: 
  1. function of creating blank image
