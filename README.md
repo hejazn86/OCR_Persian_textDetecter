@@ -108,4 +108,4 @@ Now the dataset is ready. It is a simple dataset contains 30000 images without a
 
 ## The next step is to train a RCNN with this dataset:
 
-We are going to create a **RCNN** network and split the data to *train* and _test_ datasets, then we are going to train and evaluate the *RCNN* by these data.
+We are going to create a **RCNN** network, split the data to *train* and _test_ datasets, then we are going to train and evaluate the *RCNN* by these data.
