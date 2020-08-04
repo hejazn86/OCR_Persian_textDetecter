@@ -89,7 +89,7 @@ Then we saved the image by using *save function* on the img object, otherwise it
 
 > One thing to be noticed here, is that in OpenCV library we had to pass the *bottom-left* coordinates of the text, but for the pillow library is the *left-top* coordinates.
 
-### I put each of thses three stages in a function: 
+### putting each of thses three stages in a function: 
  1. T he function of creating blank image
  2. The function of preparing Persian/Arabic text
  3. The function of putting text on image
