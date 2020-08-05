@@ -34,7 +34,7 @@ The function takes 8 arguments:
 But unfortunately, the opencv library does not contain any arabic or Persian fonts, and I was not able to install *freetype-py*, so I had to used pillow library to create the dataset.
 
 
-## using PILLOW library to create image with Persian text
+## Using PILLOW library to create image with Persian text
 
 ### Creating blank images
 
@@ -89,8 +89,8 @@ Then we saved the image by using `save` function on the `img` object, otherwise 
 
 > One thing to be noticed here, is that in OpenCV library we had to pass the *bottom-left* coordinates of the text, but for the pillow library is the *left-top* coordinates.
 
-### putting each of thses three stages in a function 
- 1. T he function of creating blank image
+### Putting each of thses three stages in a function 
+ 1. The function of creating blank image
  2. The function of preparing Persian/Arabic text
  3. The function of putting text on image
 
