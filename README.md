@@ -13,7 +13,7 @@ The first step in this project is to create the dataset. the dataset should comp
 
 `img = np.zeros((300, 300, 3), np.uint8)`
 
-The function zeros in Numpy library takes 2 argument to create blank images, the first argument is the shape of the array that we want to create, so we give the `np.zeros` function a  tuple containing three numbers: width, height and the number of channels of image. And the second argument determines the type of the data of this array, for which we set unit8 (integer numbers). The function will return a 300*300 array filled with zeros represents a black blank image. The third number in the tuple represents the 3 RGB channels.
+The `np.zeros `takes 2 argument to create blank images, the first argument is the shape of the array that we want to create, so we give the `np.zeros` function a  tuple containing three numbers: width, height and the number of channels of image. And the second argument determines the type of the data of this array, for which we set unit8 (integer numbers). The function will return a 300*300 array filled with zeros represents a black blank image. The third number in the tuple represents the 3 RGB channels.
 
 + The next step was putting text on image:
 
