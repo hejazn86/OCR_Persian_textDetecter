@@ -105,6 +105,20 @@ To examine the code, I used `matplotlib.pyplot` library to visualize thses image
 
 Now the dataset is ready. It is a simple dataset contains 30000 images without any background noise and with just one Persian word on each of them.
 
+The last step is to *save* these images to a directory. In order to perform this task, we first need to make a directory by using `os` module. After importing `os` module, we first create a directory named *images_with_persian_text* and join it to an exising path on *Google drive* (`'/drive/My Drive/datasets'`) by using the code :
+
+`path = os.path.join(parent_path, directory)`
+
+Then  pass the joined path to `os.mkdir()` function to make the directory. Now that the directory is ready, we use a `for` loop to save the images to this directory, the following code perform this:
+
+```
+for i, img in enumerate(image_text):
+  img.save("{}/{}.png".format(path, i))
+```
+
+A sit is obvious in the code, we use the `for` loop to iterate over the list of created images, then apply the save function on each of img objects inside this list to save them to the directory. The string format function help us to make the saving path of these images by putting the path in the first placeholder `{}` and the name of the image in the second one. The mode of the image should be defined by putting an extention to the string, in this case we used **png**. 
+
+
 
 ## The next step is to train a RCNN with this dataset
 
